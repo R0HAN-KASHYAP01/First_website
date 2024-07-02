@@ -7,7 +7,7 @@ import Link from 'next/link';
 const DogArray = [
   { img: "/img/Smallbreed/poodle.jpg", Name: "Poodle", path: "/smalldog/Poodle" },
   { img: "/img/Smallbreed/beagle.jpg", Name: "Beagle", path: "/smalldog/Beagle" },
-  { img: "/img/Smallbreed/AmericanCocker.jpg", Name: "American Cocker", path: "/smalldog/AmericanCocker" },
+  { img: "/img/Smallbreed/americanCocker.jpg", Name: "American Cocker", path: "/smalldog/AmericanCocker" },
   { img: "/img/Smallbreed/FrenchBulldog.jpg", Name: "French Bulldog", path: "/smalldog/FrenchBulldog" },
 ];
 
