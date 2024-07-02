@@ -1,5 +1,8 @@
-// components/DogWalkerForm.js
+"use client"
+
 import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const DogWalkerForm = () => {
   const [formData, setFormData] = useState({
@@ -39,6 +42,17 @@ const DogWalkerForm = () => {
           date: '',
           time: '',
         });
+        toast('Appointment booked successfully!', {   
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+        navigator.clipboard.writeText('Appointment booked successfully!');
       } else {
         setSuccess(false);
         setError(data.message || 'Failed to submit appointment');
@@ -52,7 +66,6 @@ const DogWalkerForm = () => {
   return (
     <div className="p-4">
       <h2 className="text-2xl font-bold mb-4">Book a Dog Walker Appointment</h2>
-      {success && <p className="text-green-500">Appointment booked successfully!</p>}
       {error && <p className="text-red-500">{error}</p>}
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
@@ -134,6 +147,7 @@ const DogWalkerForm = () => {
           </button>
         </div>
       </form>
+      <ToastContainer />
     </div>
   );
 };
