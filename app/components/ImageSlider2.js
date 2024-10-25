@@ -3,14 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { MdNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
 
-
-
 const images = [
-  '/img/img1.jpg',
-  '/img/img2.jpg',
-  '/img/img3.jpg',
-  '/img/img4.jpg',
-  '/img/slide-img2.jpg'
+  '/img/DogWalker/img1.jpg',
+  '/img/DogWalker/img2.jpg',
+  '/img/DogWalker/img3.jpg',
+  '/img/DogWalker/img4.jpg'
 ];
 
 const ImageSlider2 = () => {
@@ -33,7 +30,7 @@ const ImageSlider2 = () => {
   };
 
   return (
-    <div className="relative w-[60vw] h-[75vh] overflow-hidden mt-2">
+    <div className="relative w-full max-w-4xl mx-auto h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] overflow-hidden mt-3">
       {images.map((image, index) => (
         <div
           key={index}
@@ -47,15 +44,13 @@ const ImageSlider2 = () => {
         className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full focus:outline-none"
         onClick={prevSlide}
       >
-        <GrFormPrevious className=' w-9 h-9' />
-
+        <GrFormPrevious className='w-6 h-6 md:w-8 md:h-8 lg:w-9 lg:h-9' />
       </button>
       <button
         className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full focus:outline-none"
         onClick={nextSlide}
       >
-        <MdNavigateNext className=' w-9 h-9' />
-
+        <MdNavigateNext className='w-6 h-6 md:w-8 md:h-8 lg:w-9 lg:h-9' />
       </button>
     </div>
   );

@@ -42,7 +42,7 @@ const DogWalkerForm = () => {
           date: '',
           time: '',
         });
-        toast('Appointment booked successfully!', {   
+        toast('Appointment booked successfully!', {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -64,8 +64,8 @@ const DogWalkerForm = () => {
   };
 
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold mb-4">Book a Dog Walker Appointment</h2>
+    <div className="p-4 max-w-md mx-auto">
+      <h2 className="text-2xl font-bold mb-4 text-center">Book a Dog Walker Appointment</h2>
       {error && <p className="text-red-500">{error}</p>}
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>

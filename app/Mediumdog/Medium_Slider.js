@@ -4,9 +4,10 @@ import { MdNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
 
 const images = [
-  '/img/Mediumbreed/Labrador.jpg',
-  '/img/Mediumbreed/Husky.jpg',
-  '/img/Mediumbreed/GermanShepherd.jpg'
+  '/img/Mediumbreed/beagle.jpg',
+  '/img/Mediumbreed/americanCocker.jpg',
+  '/img/Mediumbreed/ChowChow.jpg',
+  '/img/Mediumbreed/Dachshund.jpg'
 ];
 
 const Medium_Slider = () => {
@@ -29,7 +30,7 @@ const Medium_Slider = () => {
   };
 
   return (
-    <div className="relative w-[80vw] h-[40vw] overflow-hidden mx-auto">
+    <div className="relative w-[90vw] h-[50vw] sm:w-[80vw] sm:h-[40vw] md:w-[70vw] md:h-[35vw] lg:w-[90vw] lg:h-[35vw] lg:mb-5 overflow-hidden mx-auto">
       {images.map((image, index) => (
         <div
           key={index}
@@ -48,13 +49,13 @@ const Medium_Slider = () => {
         className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full focus:outline-none"
         onClick={prevSlide}
       >
-        <GrFormPrevious className='w-9 h-9' />
+        <GrFormPrevious className='md:w-9 md:h-9' />
       </button>
       <button
         className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full focus:outline-none"
         onClick={nextSlide}
       >
-        <MdNavigateNext className='w-9 h-9' />
+        <MdNavigateNext className='md:w-9 md:h-9' />
       </button>
     </div>
   );
